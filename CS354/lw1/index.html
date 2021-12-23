@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby for CS354</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+</head>
+<body>
+    <div class='w3-container' id="HomeBase">
+        <div class='w3-container' id="Header" style='display: inline'>
+            <h2>Team Finches Presents: <span style='font-size:30px;'>RUBY</span></h2><img src='https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg' alt='logo' height='75px' style='margin-left:420px; margin-top:-75px'>
+            <hr>
+        </div>
+        <h2>General Information about Ruby</h2>
+        <div class='w3-cell' id="GeneralInformation" style="padding-right: 50px">
+            <p>Ruby was made back in 1995 by a man named Yukihiro "Matz" Matsumoto by combining his favorite parts from Perl, Smalltalk, Eiffel, Ada, and Lisp. His overall intention with making the langauge was to "make Ruby feel natural, not simple"</p>
+            <p>Matz initially said that he wanted to make a scripting language that was "more object oriented than Python, and more powerful than Perl"</p>
+            <p>In Ruby, everything is an object (similar to Smalltalk). This allows for any variable, regardless of if it is a 'primitive type' or not, to have methods performed on them.</p>
+            <p></p>
+        </div>
+        <div class='w3-cell' id="GeneralPictues">
+            <img src='https://hackernoon.com/drafts/rz1r337g.png' height="200" alt='man'>
+        </div>
+        <hr>
+        <h2>The Sacred Texts!</h2>
+        <div class='w3-container' id="Documentation">
+            <p>Here's some information about it</p>
+            <!-- This is where we'll talk about the general information about ruby -->
+        </div>
+        <hr>
+        <h2>Translators and Installation Instructions</h2>
+        <div class='w3-container' id="TranslatorsAndInstallation">
+            <p>Here's some information about it</p>
+            <!-- This is where we'll talk about the general information about ruby -->
+        </div>
+        <hr>
+        <h2>Code examples</h2>
+        <button onclick="example1()" class="w3-block w3-dark-grey"><h3>Hello World!</h3></button>
+        <div id="Example1" class="w3-panel w3-card w3-light-grey w3-dropdown-content" style="width:100%;">
+            <h3>helloworld.rb</h3>
+            <div class="w3-code notranslate">
+                <span style="color:#690;">#Ruby Hello World Program<br>#run with "ruby helloworld.rb"</span><br><br>
+                
+                puts "Hello World!" <span style="color:#690;">#Prints and adds newline</span><br>
+                print "Hello World!" <span style="color:#690;">#Prints without newline</span><br>
+                puts "Hello World!"<br>
+            </div>
+            <h3>Output</h3>
+            <div class="w3-code notranslate">
+                Hello World! <br>
+                Hello World!Hello World!<br>
+            </div>
+        </div>
+        <button onclick="example2()" class="w3-block w3-dark-grey"><h3>GCD</h3></button>
+        <div id="Example2" class="w3-panel w3-card w3-light-grey w3-dropdown-content" style="width:100%;">
+            <h3>gcd.rb</h3>
+            <pre class="w3-code notranslate">
+<span style="color:#690;">#Ruby GCD program<br>#run with "ruby gcd.rb"</span><br>
+def gcd(num1, num2)
+    while(num1 != num2)
+        if(num1>num2)
+            num1 = num1 - num2
+        else
+            num2 = num2 - num1
+        end
+    end
+    num1
+end
+
+puts gcd(35, 49)
+            </pre>
+            <h3>Output</h3>
+            <div class="w3-code notranslate">
+                7
+            </div>
+        </div>
+        <button onclick="example3()" class="w3-block w3-dark-grey"><h3>Prime Number Tester</h3></button>
+        <div id="Example3" class="w3-panel w3-card w3-light-grey w3-dropdown-content" style="width:100%;">
+            <h3>primetest.rb</h3>
+            <pre class="w3-code notranslate">
+<span style="color:#690;">#Ruby prime number program<br>#run with "ruby primetest.rb"</span><br>
+def prime(num)
+  isPrime = true
+  for i in 2..(num-1) <span style="color:#690;">#for(int i = 2; i <= num-1; i++)</span>
+    if((num % i) == 0)
+      isPrime = false
+    end
+  end
+  isPrime
+end
+
+puts prime(31)
+            </pre>
+            <h3>Output</h3>
+            <div class="w3-code notranslate">
+                true
+            </div>
+        </div>
+        <button onclick="example4()" class="w3-block w3-dark-grey"><h3>Sum</h3></button>
+        <div id="Example4" class="w3-panel w3-card w3-light-grey w3-dropdown-content" style="width:100%;">
+            <h3>sum.rb</h3>
+            <pre class="w3-code notranslate">
+<span style="color:#690;">#Ruby sum program<br>#run with "ruby sum.rb"</span><br>
+def sum_function(seq)
+  s=0
+  seq.each {|v| s+=v}
+    s
+end
+
+seq = Array.[](2,2,10,4,12)
+puts sum_function(seq)
+            </pre>
+            <h3>Output</h3>
+            <div class="w3-code notranslate">
+              30
+            </div>
+        </div>
+        <div class='w3-container' id="Code examples">
+            <div class='w3-cell' id="Column1">
+                <p>Here's a dummy explaination:</p>
+                <!-- Explaination of Code -->
+            </div>
+            <div class='w3-cell' id="Column2" style='padding: 50px'>
+                <pre>
+Here is some code
+x = 4;
+y = x-3;
+if(true){
+    print true;
+}
+else{
+    print false;
+}
+                </pre>
+                <!-- Generic Code -->
+            </div>
+        </div>
+
+        <h2>Why use Ruby over other languages?</h2>
+        <div class='w3-container' id="GeneralInformation">
+            <ul>
+                <li>Ruby was made to be readable to humans first, computers second. This makes it easy to understand code without knowing everything about Ruby.</li>
+                    <ul>
+                        <li>Want to repeat code a certain amount of times, use <b>5.times { puts someString }</b></li>
+                        <li>String manipulation, no sweat. String are indexed: <b>helloWorldString['World'] = 'WORLD'</b> produces helloWORLD</li>
+                        <li>Need to convert a string to a different type, just use <b>.to_i</b> or <b>.to_f</b> to convert the string to an integer or float respectively</li>
+                    </ul>
+                <li>Since it's so easy to read Ruby, it allows for collaboration to be a lot easier between team members. With less time being spent on explaining your code and how it works, the more work that can be done.</li>
+                <li>Ruby is still updated and maintained! Ruby 3 came out on Christmas of 2020 and 3.0.1 just came out on the 5th of April</li>
+                <li>Ruby can be used for creating Model-View-Controller(MVC) web applications using the Ruby on Rails framework. This creates more flexibility for programmers who have never made web applications before</li>
+                    <ul>
+                        <li>Plenty of websites you use are designed with Ruby on Rails:</li>
+                        <li>Hulu</li>
+                        <li>Github</li>
+                        <li>KickStarter</li>
+                        <li>AirBnB</li>
+                    </ul>
+                <li>Ruby has exception handling features, that make it more enticing over other scripting programming languages</li>
+                <li>Garbage collection!!!</li>
+                <li>Ruby runs on most modern operating systems, and is highly portable</li>
+                <li>Ruby allows you to alter its essential parts. An example of this is allowing a programmer to rename the <u>+</u> operator on numbers to <u>plus</u></li>
+            </ul>
+            
+        </div>
+        <hr>
+    </div>
+    <script>
+        function example1() {
+          var x = document.getElementById("Example1");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        function example2() {
+          var x = document.getElementById("Example2");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        function example3() {
+          var x = document.getElementById("Example3");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        function example4() {
+          var x = document.getElementById("Example4");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+    </script>
+</body>
+</html>

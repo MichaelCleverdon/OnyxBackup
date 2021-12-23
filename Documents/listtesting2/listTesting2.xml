@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="List Testing 2">
+
+  <test name="Good List" verbose="2"> 
+  	<parameter name="listType" value="goodList"/>   
+    <classes>     
+      
+	  
+	  <class name="Test_2_addToFrontA_A"/>
+	  <class name="Test_3_addToRearA_A"/>
+	  <class name="Test_4_addA_A"/>
+	  <class name="Test_5_add0A_A"/>
+	  <class name="Test_7_A_addToRearB_AB"/>
+	  <class name="Test_8_A_addAfterBA_AB"/>
+	  <class name="Test_9_A_addB_AB"/>
+	 <!-- Add your test class names here --> 	  
+	  
+    </classes>
+  </test> <!-- Good List-->
+  
+</suite> <!-- List Testing 2 -->

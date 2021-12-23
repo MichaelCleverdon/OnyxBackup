@@ -1,0 +1,2 @@
+This line should *not* match the pattern.
+I went to the food market.

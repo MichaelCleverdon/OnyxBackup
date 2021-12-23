@@ -1,0 +1,44 @@
+# Project 5: Memory Hole
+
+* Author: Michael Cleverdon
+* Class: CS452 Operating Systems
+* Prof: Buffenbarger
+
+## Overview
+This project was created as an alternative to the traditional malloc memory allocator. Our implementation utilizes the buddy system algorithm for allocating and later freeing memory from a managed pool.
+
+## Compiling and using
+This program comes with a makefile that will compile the project as well as create a test program that will call into Balloc and check to make sure the memory functions are working as expected.
+
+Running the commands below will compile the balloc library as well as the test suite for later use, then run the test suite
+```
+mv test.txt test.c
+make -f makefile test
+./test
+```
+
+If you want to add the balloc implementation to another program, you will have to compile it to the balloc.o file and then link it with the program you want to run it in. The following commands will let you do just that
+```
+mv test.c test.txt //Gotta get rid of the double main() calls
+make -f GNUMakefile
+./deq
+```
+
+## Discussion
+In essence, this project was one of the most difficult projects I've had the pleasure of working through in all my schooling. At first, the project just didn't make sense in my brain. I tried to think of how to turn the algorithm into actual code using the framework that was provided. A few major pain points that I remember from trying to start the program:
+- The parameter names were very difficult to understand what they were over supposed to represent since we were on Thanksgiving break and couldn't ask questions about it in person.
+- The algorithm itself was difficult to parse through and I don't feel like I understood it until Prof Buffenbarger went over it in class, which was after we were supposed to have been working through it for a week over break.
+- The bitmap functions were extremely difficult to parse through, even after asking questions during class due to my lack of experience using bitmaps.
+
+Another aspect of the project that was difficult was the bitmap and how to integrate that with bfree(). Even at this point, I'm not entirely sure I understand the free side of the buddy algorithm other than the theoretical. The theoretical side of it sounds easy, when you get a block returned back to the balloc program, search through the bitmap from lowest order to highest order and the first *allocated* bit is the size of the block that's getting returned. After that, check if its buddy is on the freelist, if it is, merge the blocks and try to add the block to the higher level free-list, otherwise just add it to the freelist. That part sounds pretty easy, but turning the theorhetical algorithm into actual code was incredibly difficult, even with the implemented bitmap, I felt like it was a black box that I couldn't get to work no matter what I tried.
+
+Detailed explanation of what doesn't work:
+- BFree
+  - There is pseudocode for this function, but I didn't know how to translate the algorithm into actual code
+- BSize
+  - Same as BFree, pseudocode but no actual code implementation
+- Wrapper***
+  - I Say that this isn't working, but after digging in a bit, it would seem as if the linked in balloc library works as intended, just that the c++ library is asking for something extreme like 72K bytes from malloc, and the program is erroring out as expected since the pool is around 4k. If the pool is larger, the blocks would be allocated, but without a free function, I don't want to have leaks from the libraries needed to run c++ on onyx.
+
+## Testing
+I developed a thorough test suite to test the functionality of the Balloc program by calling into it directly using bnew, balloc, bfree, etc. I feel like I had a solid framework of what my tests were expecting and being able to visibly check to see that the tests were passing or failing. I would've liked to have an automated "pass/fail" system, but with my current implementation of bprint(), it would've been a significant amount of parsing work to be able to check if things were passing or failing. And ultimately, I believe that my tests will show where things are failing if the program breaks due to the entire print statement being displayed and the expected output is described so if something goes wrong, the tester can check to see what is expected vs what actually happened very easily.

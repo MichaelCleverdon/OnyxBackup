@@ -1,0 +1,22 @@
+CC = gcc
+CFLAGS = -Wall -g -Wl
+prog = test
+all: test
+
+test: balloc.o
+	$(CC) $(CFLAGS) -o $(Target) $(Target).c
+
+balloc.o: bitmap.o freelist.o error.h
+	$(CC) $(CFLAGS) -c balloc.c bitmap.o freelist.o error.h
+
+bitmap.o: bitmap.c utils.o
+	$(CC) $(CFLAGS) -c bitmap.c
+
+utils.o: utils.c
+	$(CC) $(CFLAGS) -c utils.c
+
+freelist.o: utils.o
+	$(CC) $(CFLAGS) -c freelist.c
+
+clean:
+	rm *.o

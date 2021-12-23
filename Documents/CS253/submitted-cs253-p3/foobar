@@ -1,0 +1,3 @@
+gcc -MM sed253.c copy.c substitute.c delete.c > rules.d
+gcc -Wall -std=c99 -g -o0 -c sed253.c -o sed253.o
+gcc -Wall -std=c99 -g -o0 sed253.o -o sed253

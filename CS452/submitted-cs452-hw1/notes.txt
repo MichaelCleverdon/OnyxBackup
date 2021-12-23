@@ -1,0 +1,11 @@
+Void * can only be passed around to be used in other methods as a pass parameter
+
+Get will pop the element from the end (remove and return value removed)
+
+Head is the removal point
+    Ith starts at the removal point and goes towards the insertion point
+Tail is the insertion point
+
+Keep track of Data type using ?typeof? in the node.
+
+Tests in another file or two

@@ -1,0 +1,23 @@
+Michael Cleverdon
+Project: Shell
+Class: Buff CS452
+
+# Run Instructions:
+Just type in "make run" with the provided MAKEFILES and it will start up a new, custom shell process
+
+# What it does:
+This project is a custom implementation of a shell process in Linux. It has 4 built-in commands:
+* pwd: &ensp;Prints the current working directory
+* cd: Will change the current working directory to the directory specified. If a "-" is given for the directory to change to, the shell will instead change the current working directory to the previous directory the user was in
+* history: Prints the history of the shell. 
+* exit: This command will exit the shell. If there are any background processes, the shell will first wait for all background processes to return before exiting. This is to prevent the zombie apocalypse from happening
+
+* All other commands that run in bash will run normally. You can touch files, rm -r directories, even sudo rm -rf if you so choose (but let's just hope you didn't wake up and choose violence today)
+
+# Easy Parts
+I didn't have too much trouble implementing the background processes or implementing the pipes. I found a page online that described how you can make multiple pipes by making a massive pipe array since the pipe() function call only takes the current index and the index + 1 of the int array that gets passed in. If you make a big array of pipes, you can access all of them through as you iterate through all of the commands. Background processes were also pretty simple because all that was needed was to check for the character & in the parser and set the fg flag to 0 in the pipelines, then consume it in execCommand to wait for fg commands or set the pid to the added pid property on the command struct for later use in exit
+
+# Hard Parts
+I had many issues with memory leaks through this project. I don't entirely understand why some things are having leaks in areas like deq_map and deq_del, but I didn't have enough time to figure them out entirely
+
+I also had problems developing the exit program in its entirety, but I got those figured out once I realized that waitpid() exists and that I can use it to achieve what was required of me

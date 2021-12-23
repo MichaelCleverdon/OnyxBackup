@@ -1,0 +1,36 @@
+# Project 3: RegEx
+
+* Author: Michael Cleverdon
+* Class: CS361 1
+* Semester: Fall 2021
+
+## Overview
+This program is made to create an NFA from a given RegEx string.
+
+## Compiling and Using
+This project was a little more complex to compile and use than the last ones due to the .jar class libraries given to us for the NFA and DFA implementations. 
+
+- Compilation
+Start in the base directory and enter 
+```
+javac -cp ".:./CS361FA.jar" re/REDriver.java
+```
+In order to run the program, enter
+```
+java -cp ".:./CS361FA.jar" re.REDriver <textFileToParse>
+```
+
+The text files must follow a given format of 
+* The first line of a file is a regular expression, which consists of the following seven characters only: a, b, e, |, (, ) and *
+  * The character |represents the union operator, the character ⇤is the star operator, and e denotes the empty string. The alphabet contains only symbols a and b. (, ) are used to set the precedence of the operations. Regular expressions are always valid
+* After the first line, the following lines contain some input strings, one per line. Your program should determine whether each of them is a member of the language described by the regular expression. An input string contains only a, b and e characters. All input strings are valid strings over the alphabet.
+
+## Discussion
+
+After reading the supplied documentation for the regex parser, creating the parser wasn't terribly difficult to make. It was just making sure that I kept track of how to utilize the NFAs from past assignments since my IDE didn't auto-populate the methods from the library. This meant that I had to look through the documentation to be able to create the NFA utilizing the aggregate functions like union and concat by setting the states, alphabets, start states, and end states from one NFA to another.
+
+I did have some issues getting my IDE to recognize the library, but after a quick google session, I was able to find out how to add the library to it to be able to get it to compile a little easier through the built-in run commands.
+
+## Testing
+
+I ran every single test file that was provided and made sure I got the same output as the doc said we should get, therefore I believe that my program is thorougly tested and ready for the full test suite.

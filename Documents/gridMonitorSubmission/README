@@ -1,0 +1,67 @@
+****************
+* Project 1
+* CS221-2
+* 9/19/2019
+* Michael Cleverdon
+**************** 
+
+OVERVIEW:
+
+This program is a monitoring program for a new solar array in order to detect potential problems within the solar array. This information could be piped into another program that shuts down certain cells depending on the output of this program.
+
+INCLUDED FILES:
+
+ * GridMonitor.java - It was the file that was required for this program. It contains all of the logic for the GridMonitor
+ * README - Documentation of this project
+
+
+COMPILING AND RUNNING:
+
+Compile the GridMonitor Class using this command:
+$ javac GridMonitor.java
+
+Then run the testNG tests to make sure they all pass by using this command:
+$ java org.testng.TestNG gridMonitor.xml
+ 
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+The main concepts of this program were the logic behind creating the 2d arrays and the proper scoping of the variables. The logic was mainly to take one thing in to the method and transform it in some way in order to have it be used later on in the program. For example, the setBaseGrid() method takes in the Scanner for the file and transforms that plain text file into a 2d array that has all the information in the correct spot with the correct number of rows and columns associated with it. Additionally, all the get...Grid() methods were making sure that the grids were set before trying to get them. This prevents the user from trying to get a grid that didn't exist at that moment.
+
+There was one class, the GridMonitor class. It performed all the logic for the program. The interface, GridMonitorInterface, was used to define the required variables for the project and nothing else.
+ 
+ I designed the program to go through a certain logic whenever trying to get a certain grid. The process is as follows:
+	check if the grid exists
+		return it;
+	else
+		set...Grid();
+		get...Grid();
+ By doing this logic every time the grid is gotten, it makes sure that the grids aren't ever getting returned improperly. I appreciate this design because it is cleanly written, uses recursion, and performs the logic properly.
+
+
+The parts of the program that could use improvements are the error trapping. The program works perfectly as long as the inputs are correct. If the inputs aren't perfect, then the program could have fatal errors. 
+
+
+
+TESTING:
+ 
+ I made sure that the program ran without any failures and that it was not a "brute forced" solution. My program can handle the bad input of not having a correct file, but anything other than that will cause severe issues for my program, and possibly cause a fatal error. My program is not idiot-proof, because I was told to expect that all of the files were proper in their formatting. The known issues are:
+	Columns and Rows can't be anything other than ints
+	Numbers in the grid can't be anything other than doubles
+	No try-catch blocks inside the methods to prevent fatal errors
+
+DISCUSSION:
+ 
+ I had quite a few problems with my development process. The first major one was the fact that I wasn't passing in a File to the Scanner class and was instead passing in a string. I solved this by creating a new File() of the string to fufill the File type of the parameter of the Scanner constructor. This caused major problems because I couldn't read any files and debug my program without any start. Next, I wasn't storing negative values for my deltaGrid and only storing absolute values, which caused the remaining problems in my program. I fixed this by storing the deltaGrid as-is and using Math.abs() for the calculations in the deltaGrid. After I solved those, I only had syntax errors inside my program, which were quickly fixed.
+
+ I found the surroundingSumGrid kind of challenging at first to create, because there are so many scenarios to think through. However, I took it one scenario at a time and I ended up getting through it all in the end. I didn't have a large "clicking" moment during this project because it wasn't terribly difficult to do, just took some time to finish it. 
+ 
+
+----------------------------------------------------------------------------
+
+All content in a README file is expected to be written in clear English with
+proper grammar, spelling, and punctuation. If you are not a strong writer,
+be sure to get someone else to help you with proofreading. Consider all project
+documentation to be professional writing for your boss and/or potential
+customers.
+

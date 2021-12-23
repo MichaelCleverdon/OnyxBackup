@@ -1,0 +1,215 @@
+pwd
+cd ..
+pwd
+cd -
+pwd
+quit
+exit
+ls
+cat notes.txt
+history
+quit
+exit
+wait 10
+sleep 10 &
+sleep 10
+sleep 30
+exit
+quit
+exit
+ls &
+wait 10 &
+sleep 10 &
+sleep 10
+sleep
+sleep --help
+sleep 5s
+quit
+exit
+quit
+exit
+ls ; pwd
+pwd ; ls
+cc
+pwd &
+pwd > output.txt
+pwd > output.txt
+b execCommand
+r
+exit
+pwd > output.txt
+cd .. ; pwd > output.txt
+cd -
+pwd > output.txt
+cd - ; pwd > output.txt
+cd - ; pwd > output.txt
+exit
+cd ..
+pwd
+c d-
+cd -
+pwd
+cd -
+ls
+pwd
+cd -
+pwd
+cd hw3
+cd -
+ls
+pwd
+cd -
+pwd
+exit
+ls
+pwd
+cd ..
+pwd
+cd -
+pwd
+cd -
+pwd
+cd -
+cd - > output.txt
+cd - > output.txt
+cd - ; pwd > output.txt
+cd - ; pwd > output.txt
+exit
+exit
+pwd ; pwd > output.txt
+quit
+exit
+cd ..
+cd -
+pwd
+cd -
+pwd
+cd hw3
+pwd
+cd ..
+pwd
+cd -
+pwd
+exit
+b bi_##cd
+exit
+cd ..
+pwd
+cd -
+pwd
+cd -
+pwd
+pwd ; pwd > output.txt
+cd ../../..
+pwd
+cd -
+pwd
+ls
+cd ..
+pwd
+cd -
+ls
+pwd
+ls
+cd hw3
+ls
+exit
+gdb shell
+exit
+pwd & cd .. & pwd
+ls
+ls & pwd
+cat Test/Test_cd_absolute/inp
+ls
+cat Test/Test_cd_absolute/inp & pwd
+sleep 5 &
+wait 5
+sleep 5s
+sleep 5s ; pwd
+quit
+exit
+ls > output.txt & wc < output.txt
+ls > output.txt & wc < output.txt
+cat output.txt
+quit
+exit
+pwd | cat
+quit
+exit
+pwd & ls | wc
+ls & pwd | wc
+pwd
+pwd | cat | wc & pwd
+cd .. &
+pwd
+cd .. &
+pwd
+pwd | wc | cat
+sleep 10
+exit
+sleep 5 &
+exit
+sleep 5 &
+exit
+sleep 10 &
+exit
+sleep 30 &
+exit
+exit
+cd ../hw3
+ls
+sleep 30 &
+exit
+sleep 40 &
+exit
+sleep 40 &
+exit
+exit
+sleep 4 & pwd &
+exit
+ls
+cat
+echo < output.txt
+cat output.txt
+cat < output.txt
+exit
+ls
+pwd
+help
+cat < output.txt
+wc < output.txt
+ls | cat
+quit
+exit
+pwd
+exit
+pwd
+chmod 777 vg
+./vg
+exit
+ls
+pwd
+make
+exit
+ls
+exit
+ls
+exit
+cat output.txt > output1.txt | wc
+quit
+exit
+pwd > output.txt
+exit
+ls
+ls
+j
+pwd
+exit
+ls
+pwd > output.txt
+sleep 5 &
+exit
+cd ..
+pwd
+cd - ; pwd
+exit

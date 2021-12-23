@@ -1,0 +1,33 @@
+Debugging ArraySet.java
+Name: Michael Cleverdon
+Section: 002
+
+Bug #1:
+    -What's the name of failed test?
+	testIsEmpty()
+    -Where (line number) did you place breakpoint(s)? 
+	40
+    -Where (line number) was the bug was found?
+	40
+    -What did you do to fix it?
+	I fixed the logic with the return statement to == 0 instead of > 0 because if rear is 0, the array doesn't have anything in it
+
+Bug #2:
+    -What's the name of failed test?
+	testAdd_Element()
+    -Where (line number) did you place breakpoint(s)? 
+	55
+    -Where (line number) was the bug was found?
+	60
+    -What did you do to fix it?
+	I added a rear++ because the rear variable was never getting edited once it was set, and it needed to be added to after adding an element to the array
+
+Bug #3:
+    -What's the name of failed test?
+	testRemove_validElements()
+    -Where (line number) did you place breakpoint(s)? 
+	74
+    -Where (line number) was the bug was found?
+	74
+    -What did you do to fix it?
+	I made sure the while statement's condition was i < rear - 1 instead of i < rear because there was an arrayIndexOutOfBounds error thrown

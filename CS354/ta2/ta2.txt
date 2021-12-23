@@ -1,0 +1,108 @@
+3.2)
+These differences between variable allocation stem from the lack of communication between the two language devleopers (internet not terribly integrated in society at this point) and they decided to allocate variables differently based solely on preference.
+
+Scheme
+(define (sum seq)
+  (if (null? seq)
+      0
+      (+ (car seq) (sum (cdr seq)))))
+
+(display (sum '(5 6 1 8 3 7)))
+(display "\n")
+Due to lists being better handled by using the heap, this program would be problematic by only using the stack.
+
+C
+int x = 0;
+void main(){
+    int x = 1;
+}
+This doesn't work if the variables are statically allocated because they have the same names, and therefore can't exist at the same time.
+
+3.4)
+
+Example 1:
+
+void main(){
+    true();
+}
+
+//Some garbage function
+int true(){
+    static int trueVar = 1;
+    if(trueVar){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+Here trueVar is declared in the true() method as static, so it continues to live on in memory, but it isn't in scope after the true() method returns
+
+
+void main(){
+    letsMakeAStruct();
+}
+
+letsMakeAStruct(){
+    struct *someStuct someStruct = (struct *someStruct) malloc(sizeof(struct someStruct));
+}
+Here malloc allocates memory for a struct at the pointer someStruct, but that continues to live on in the execution of main because the memory was allocated for it, even if it's not accessible
+
+
+void main(){
+    int someCode = 0;
+    {
+        int someCode = 1;
+        print(someCode); //definitely forgot how to make a c print statement lol
+    }
+}
+This code block inside of main would create an invisible variable someCode from the original main method and not the code block. The only someCode variable that is visible to the program at the
+    print statement would be the one inside of the code block
+
+
+3.5)
+//My version of the book has a break after the "print a, b" in the inner function, so I'm assuming that the a : integer := 3 is inside the inner function
+
+C:
+    1, 1
+    1, 1
+    1, 2
+Modula-3:
+    1, 1
+    3, 1
+    3, 1
+
+3.7)
+    A) After reversing L, L points to the new reversed list, but the original list still exists in memory, and so that is causing a memory leak every time someone reverses the list
+    B) She will tell him that by creating the list_node* T in order to delete the list L, he is creating dangling references to the list after deleting the list L and causing errors that way
+
+
+3.14)
+    Static Scope:
+        1
+        1
+        2
+        2
+
+    Dynamic Scope:
+        1
+        1
+        2
+        1
+
+
+    The difference between static scope and dynamic scope is that static scope only allows variables to live in the code block that they are declared whereas dynamic scope allows variables to be used from anywhere
+        in the program, which is the difference in the second() method because it declares a new 'x' to use and doesn't save that value to the global x
+
+
+3.18)
+    Shallow Binding:
+        10
+        20
+        30
+        40
+    Deep Binding:
+        10
+        20
+        03
+        44

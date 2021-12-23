@@ -1,0 +1,28 @@
+Author: Michael Cleverdon
+Project: HW4 - Tokenizing driver
+Professor: Buffenbarger
+
+# HOW TO RUN
+$ make install
+    This will install the driver onto your linux system
+$ make scan
+    This will run the scanner program which will tokenize the colon separated string from stdin
+
+# Overview of what this project is
+This project required me to create a driver in C that would tokenize a string from user input. It will then print out the tokens one at a time to stdout
+
+# More details and usage
+When calling the driver, you will need to call int scanner = open("/dev/Scanner",O_RDWR). This will create a new instance of the scanner and return the file descriptor of the opened driver to the user for future use.
+
+The separators can be user defined using ioctl(scanner, 0, 0). This will then capture the next write and overwrite the separators of the scanner to the user specified ones.
+
+The user can then write data to the tokenizer driver for later use using write(scanner, lineToWrite, lengthOfLine). As stated previously, if ioctl is called, then write will not tokenize the string and instead set the separators of the scanner. The reasoning behind the lengthOfLine parameter is so that if a user has a string with \0 bytes as its separator, the driver can still parse the string properly despite being written in a language that has special formatting for the \0 bytes in strings. Calling write before reading all of the data will remove all of the existing tokens and create new ones
+
+After writing, the user can call read to read out individual tokens using read(scanner, &bufferToFill, maxLengthToRead). If maxLength... is shorter than the token being read, the scanner will continue reading that same token during the next read. read() will return the number of characters read, which helps to ensure that it is reading back data and the right amount of data.
+
+When the user is done with the scanner, they must call close(scanner) in order to ensure there are no leaking file descriptors.
+
+# Struggles and Triumphs
+
+This project was not terribly difficult to implement. There were some easier parts (namely ioctl and read once all the data structures were made), but there were also harder parts with implementing write (that had many iterations to try and get the NULL byte parsing to work properly) and creating the right data structures to ensure that I had all of the data that was needed to make the driver work as intended. Overall, the project wasn't too bad; quite a nice refresher after making the shell for the last project
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Indexed Unordered List">
+
+  <test name="IUArrayList" verbose="2">   
+  	<parameter name="listType" value="arrayList"/> 
+    <classes>     
+      <class name="Test_1_emptyList"/>
+	  <class name="Test_6_A_addToFrontB_BA"/>
+	  <class name="Test_39_ABC_remove1_AC"/>
+	  <class name="Test_2_addToFrontA_A"/>
+	  <class name="Test_3_addToRearA_A"/>
+	  <class name="Test_4_addA_A"/>
+	  <class name="Test_5_add0A_A"/>
+	  <class name="Test_7_A_addToRearB_AB"/>
+	  <class name="Test_8_A_addAfterBA_AB"/>
+	  <class name="Test_9_A_addB_AB"/>
+	  <class name="Test_11_A_add1B_AB"/>
+	  <class name="Test_12_A_removeFirst"/>
+	  <class name="Test_13_A_removeLast"/>
+	  <class name="Test_14_A_removeA"/>
+	  <class name="Test_15_A_remove0"/>
+	  <class name="Test_16_A_set0B_B"/>
+	  <class name="Test_18_AB_removeFirst_B"/>
+	  
+	  
+	  <!-- Add your test class names here --> 
+	  
+	  
+    </classes>
+  </test> <!-- IUArrayList -->
+
+</suite> <!-- Indexed Unordered List -->

@@ -1,0 +1,16 @@
+Create algorithm in user space then make it part of the kernel so debugging isn't so terrible
+
+drivers are under /dev
+Open driver for read/WRITE
+    write with write() or printf()
+    read with read() or getline()
+    ioctl() manipulates the io device
+    Code to write will include:
+        Generate token from a string using a tokenizer
+        Output tokens one at a time
+        Separators can take a string and any character in that string will be a Separator
+        
+    Copy Hello.c and make it Scanner.c
+    don't use kmalloc at the beginning, just use malloc
+    Get rid of all driver stuff until algorithm is made
+    

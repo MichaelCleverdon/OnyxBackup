@@ -1,0 +1,419 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>68/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Sep 19 21:03:33 CDT 2019</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (353 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='GridMonitorTester.testBaseGridEncapsulation()'><b>testBaseGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@e720b71</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testBaseGridEncapsulation()'><b>testBaseGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@462d5aee</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testBaseGridEncapsulation()'><b>testBaseGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@757942a1</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testBaseGridEncapsulation()'><b>testBaseGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@66d1af89</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testBaseGridEncapsulation()'><b>testBaseGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@37374a5e</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testBaseGridEncapsulation()'><b>testBaseGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@2db7a79b</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testConstructor()'><b>testConstructor</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testConstructor()'><b>testConstructor</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testConstructor()'><b>testConstructor</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testConstructor()'><b>testConstructor</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testConstructor()'><b>testConstructor</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testConstructor()'><b>testConstructor</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDangerGridEncapsulation()'><b>testDangerGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[Z@43bd930a, false</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDangerGridEncapsulation()'><b>testDangerGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[Z@64f6106c, true</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDangerGridEncapsulation()'><b>testDangerGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[Z@7a30d1e6, true</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDangerGridEncapsulation()'><b>testDangerGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[Z@cb0ed20, false</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDangerGridEncapsulation()'><b>testDangerGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[Z@74a10858, true</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDangerGridEncapsulation()'><b>testDangerGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[Z@28ac3dc3, false</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDeltaGridEncapsulation()'><b>testDeltaGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@4e718207</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDeltaGridEncapsulation()'><b>testDeltaGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@543c6f6d</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDeltaGridEncapsulation()'><b>testDeltaGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@51c8530f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDeltaGridEncapsulation()'><b>testDeltaGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@43738a82</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDeltaGridEncapsulation()'><b>testDeltaGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@1fc2b765</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testDeltaGridEncapsulation()'><b>testDeltaGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@2a70a3d8</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testFileNotFoundException()'><b>testFileNotFoundException</b><br>Test class: GridMonitorTester</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetBaseGrid()'><b>testGetBaseGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@e720b71</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetBaseGrid()'><b>testGetBaseGrid</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@462d5aee</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetBaseGrid()'><b>testGetBaseGrid</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@757942a1</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetBaseGrid()'><b>testGetBaseGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@66d1af89</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetBaseGrid()'><b>testGetBaseGrid</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@37374a5e</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetBaseGrid()'><b>testGetBaseGrid</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@2db7a79b</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDangerGrid()'><b>testGetDangerGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[Z@43bd930a</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDangerGrid()'><b>testGetDangerGrid</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[Z@64f6106c</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDangerGrid()'><b>testGetDangerGrid</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[Z@7a30d1e6</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDangerGrid()'><b>testGetDangerGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[Z@cb0ed20</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDangerGrid()'><b>testGetDangerGrid</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[Z@74a10858</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDangerGrid()'><b>testGetDangerGrid</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[Z@28ac3dc3</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDeltaGrid()'><b>testGetDeltaGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@4e718207</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDeltaGrid()'><b>testGetDeltaGrid</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@543c6f6d</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDeltaGrid()'><b>testGetDeltaGrid</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@51c8530f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDeltaGrid()'><b>testGetDeltaGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@43738a82</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDeltaGrid()'><b>testGetDeltaGrid</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@1fc2b765</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetDeltaGrid()'><b>testGetDeltaGrid</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@2a70a3d8</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingAvgGrid()'><b>testGetSurroundingAvgGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@2e3fc542</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingAvgGrid()'><b>testGetSurroundingAvgGrid</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@4524411f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingAvgGrid()'><b>testGetSurroundingAvgGrid</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@10dba097</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingAvgGrid()'><b>testGetSurroundingAvgGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@704d6e83</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingAvgGrid()'><b>testGetSurroundingAvgGrid</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@eb21112</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingAvgGrid()'><b>testGetSurroundingAvgGrid</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@3578436e</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingSumGrid()'><b>testGetSurroundingSumGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@6eceb130</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingSumGrid()'><b>testGetSurroundingSumGrid</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@67b467e9</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingSumGrid()'><b>testGetSurroundingSumGrid</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@5c072e3f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingSumGrid()'><b>testGetSurroundingSumGrid</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@954b04f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingSumGrid()'><b>testGetSurroundingSumGrid</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@710726a3</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGetSurroundingSumGrid()'><b>testGetSurroundingSumGrid</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@481a15ff</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testGridMonitorInterface()'><b>testGridMonitorInterface</b><br>Test class: GridMonitorTester</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingAvgGridEncapsulation()'><b>testSurroundingAvgGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@2e3fc542</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingAvgGridEncapsulation()'><b>testSurroundingAvgGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@4524411f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingAvgGridEncapsulation()'><b>testSurroundingAvgGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@10dba097</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingAvgGridEncapsulation()'><b>testSurroundingAvgGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@704d6e83</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingAvgGridEncapsulation()'><b>testSurroundingAvgGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@eb21112</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingAvgGridEncapsulation()'><b>testSurroundingAvgGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@3578436e</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingSumGridEncapsulation()'><b>testSurroundingSumGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample.txt, [[D@6eceb130</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingSumGridEncapsulation()'><b>testSurroundingSumGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: negatives.txt, [[D@67b467e9</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingSumGridEncapsulation()'><b>testSurroundingSumGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: oneByOne.txt, [[D@5c072e3f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingSumGridEncapsulation()'><b>testSurroundingSumGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sample4x5.txt, [[D@954b04f</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingSumGridEncapsulation()'><b>testSurroundingSumGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: sampleDoubles.txt, [[D@710726a3</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+<tr>
+<td title='GridMonitorTester.testSurroundingSumGridEncapsulation()'><b>testSurroundingSumGridEncapsulation</b><br>Test class: GridMonitorTester<br>Parameters: wideRange.txt, [[D@481a15ff</td>
+<td></td>
+<td>0</td>
+<td>GridMonitorTester@21213b92</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,33 @@
+# Project 2: NFA
+
+* Author: Michael Cleverdon
+* Class: CS361 - 1
+* Semester: FALL 2021
+
+## Overview
+
+This program was made to create a NFA from the provided input file and then print it as a DFA
+
+## Compiling and Using
+
+javac fa/nfa/NFADriver.java
+java fa/nfa/NFADriver {inputFile that is formatted properly}
+
+# Data file structure
+
+The 1st line contains the names of the final states, i.e., elements ofF. The names are separated by the white space. It can be empty if there are no final states. A name is always one character long, e.g., ‘B’, ‘2’, or ’z’.
+The 2nd line contains the name of the start state, i.e.,q0.
+The 3rd line contains the rest of the DFA’s states, i.e., those states that are not q0 or in F. This line can be empty if all states have been identified in the previous two lines.
+The 4th line lists the transitions. Transitions are separated by the white space. Three characters encode a transitcdion s0s1s2, where
+    –The first symbol s0 is the name of the “from” state.
+    –The second symbol s1 is the symbol from the alphabet, i.e.,s1 is in Sigma.
+    –The third symbol s2 is the name of the “to” state.
+Starting from line 5, each line contains a string for which we need to determine whether it is in the language of the DFA. The strings are always over the DFA’s alphabet and we use ‘e’ symbol to represent the empty string.
+
+## Discussion
+
+The project in of itself was not terribly difficult to finish. After going through the final on CFGs and the stuff from part 2 of the class, NFAs weren't terribly hard to implement. I did have a little bit of trouble around the eClosure when trying to get my DFS algorithm fully ironed out, but in the end I managed to figure it out. I also forgot for the first bit that NFAs had Sets of states as their transitions instead of a single state, so that was a fun time trying to debug that. The easiest part I'd say was setting up everything around the eClosure and getDFA
+
+## Testing
+
+I ran through all of the test cases and they returned the proper result, so I'm feeling happy about this.

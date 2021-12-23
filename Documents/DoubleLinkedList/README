@@ -1,0 +1,57 @@
+****************
+* Project 2 / Double Linked List
+* CS221 Section 2
+* 12/6/2019
+* Michael Cleverdon
+**************** 
+
+OVERVIEW:
+
+The program is complete implementation of a Double Linked List with full ListIterator functionality.
+
+INCLUDED FILES:
+
+ * DLLNode.java - source file of the Node used in the list
+ * IndexedUnsortedList.java - source interface file for the list
+ * IUDoubleLinkedList.java - source of the Double Linked List and houses the ListIterator class
+ * Many "Test_______.java" files - all of these are test classes to make sure the list is operating properly.
+ * README - this file
+
+COMPILING AND RUNNING:
+
+ From the directory containing all source files, compile the
+ driver class (and all dependencies) with the command:
+ $ javac IUDoubleLinkedList.java
+
+ Run the TestNG tester to make sure the list performs as expected with the command:
+ $ java org.testng.TestNG iuDoubleLinkedList.xml
+
+ Console output will give the results of the tests after the program finishes.
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+
+ The main idea for the list program that I created was to be efficient with its algorithms while also making sure that my logic wasn't just a bunch of 
+ of "if" statements and to help parse through some of the more complex solutions by reusing code that I had already created in the past. A prime example of this
+ is my add() methods. They check for specific cases, like adding at the beginning or end of a list, and then use prebuilt code (addToFront() or addToRear()) to 
+ make the code simpler and easier to read and maintain. 
+ 
+ The program has two main classes. First there is the main IUDoubleLinkedList which houses the entirety of the list and its operations. Then there is
+ the CustomListIterator class which houses the ListIterator I created for my DoubleLinkedList. The iterator is used to loop through the entire list and perform
+ operations on it while moving through the elements.
+
+ I would like to refactor the code to eventually utilize the ListIterator for methods like set() and indexOf() as they would be optimized with the use of
+ iterators and they are currently much less efficient than they could be.
+
+TESTING:
+ 
+ I have made many test cases in order to make sure that all the operations a list can perform work the intended way. 
+
+DISCUSSION:
+ 
+ I had many problems come up in my ListIterator because I initially build it to work by using a Node as a cursor instead of working with a normal cursor.
+ I fixed that problem by rewriting the code to work as the ListIterator interface expected and I ended up having very few, if any, problems afterwards.
+ 
+ Also, since I mainly took my Single Linked List as my code base, I had to make sure to have the setPrevious() method calls everywhere in the program where it
+ was needed. It took a little while and with the help of my test cases I finally hunted them all down.
+ 

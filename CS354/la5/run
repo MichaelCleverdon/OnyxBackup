@@ -1,0 +1,18 @@
+#!/bin/bash
+if [ ! -f "$1" ]; then
+    echo "Please supply a file"
+    exit 1
+fi
+if [ -f output.html ] ; then
+    rm output.html
+fi
+touch output.html
+echo "<html> <head> <title>Zillow Search Results</title> </head> <body> <h2>Homes with Gas heating in your area</h2>" > output.html
+echo "<table><tr> <th style=\"padding-left:5em\">Date</th><th style=\"padding-left:5em\">Subdivision Name</th> <th style=\"padding-left:5em\">Price</th> <th style=\"padding-left:5em\">Lot(s)</th> <th style=\"padding-left:5em\">Block</th> </tr>" >> output.html
+tail -n +1 $1 | ./parse.sh >> output.html
+echo "</table> <h2>Single Family homes in your area</h2><table>" >> output.html
+echo "<tr> <th style=\"padding-left:5em\">Date</th><th style=\"padding-left:5em\">Subdivision Name</th> <th style=\"padding-left:5em\">Price</th> <th style=\"padding-left:5em\">Lot(s)</th> <th style=\"padding-left:5em\">Block</th> </tr>" >> output.html
+tail -n +1 $1 | ./parse2.sh >> output.html
+echo "</table> </body> </html>" >> output.html
+
+echo "Your output is located in the output.html file"

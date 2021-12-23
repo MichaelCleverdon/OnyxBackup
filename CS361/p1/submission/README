@@ -1,0 +1,31 @@
+CS361 Project 1: DFA
+
+Author: Michael Cleverdon CS361-1
+
+Overview:
+    This program was made to demonstrate how DFAs work and to demonstrate my understanding of the machine type
+
+    After running the program with a valid data file, the DFA Driver class will run the input string through the constructed DFA machine, simulating whether the string is accepted by the language defined by the machine. After creating the machine, the program will print out the 5-tuple of the DFA. The program will then simulate every string through the DFA and print true if the string is accepted by the language or false if the string is not accepted.
+
+Run instructions: 
+    javac fa/dfa/DFADriver.java
+    java fa.dfa.DFADriver \<input_file>
+
+Data File Structure
+
+The 1st line contains the names of the final states, i.e., elements ofF. The names are separated by the white space. It can be empty if there are no final states. A name is always one character long, e.g., ‘B’, ‘2’, or ’z’.
+The 2nd line contains the name of the start state, i.e.,q0.
+The 3rd line contains the rest of the DFA’s states, i.e., those states that are not q0 or in F. This line can be empty if all states have been identified in the previous two lines.
+The 4th line lists the transitions. Transitions are separated by the white space. Three characters encode a transitcdion s0s1s2, where
+    –The first symbol s0 is the name of the “from” state.
+    –The second symbol s1 is the symbol from the alphabet, i.e.,s1 is in Sigma.
+    –The third symbol s2 is the name of the “to” state.
+Starting from line 5, each line contains a string for which we need to determine whether it is in the language of the DFA. The strings are always over the DFA’s alphabet and we use ‘e’ symbol to represent the empty string.
+
+Discussion:
+I had very few issues with the project. I was able to implement the traversal method pretty seamlessly, which I considered the hardest part of the project.
+However, I did have issues with the toString method and for some reason in the test3 file, the states wouldn't order themselves properly. But I was running out of time to finish the project, so I decided to turn it in as is. Other than test3, my formatting looks great and the toString() method works as intended, which is the confusing part.
+
+Testing:
+I ran all of the test files and got close to the same output, so I called it good there
+

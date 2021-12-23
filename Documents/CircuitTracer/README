@@ -1,0 +1,131 @@
+****************
+* Project 3/Circuit Tracer
+* CS221 - 2
+* 12/14/19
+* Michael Cleverdon
+**************** 
+
+OVERVIEW:
+
+ This program finds the fastest route between two points while making sure to 
+go around walls labeled as 'X' and displays the fastest route(s) between those 
+points.
+
+INCLUDED FILES:
+
+ List the files required for the project with a brief
+ explanation of why each is included.
+
+ e.g.
+ * CircuitBoard.java - Object file for the CircuitBoard object
+ * CircuitTracer.java - source file, houses the tracing algorithm that goes 
+through and finds the quickest route from point 1 to point 2
+ * README - this file
+
+
+COMPILING AND RUNNING:
+
+ Give the command for compiling the program, the command
+ for running the program, and any usage instructions the
+ user needs.
+ 
+ These are command-line instructions for a system like onyx.
+ They have nothing to do with Eclipse or any other IDE. They
+ must be specific - assume the user has Java installed, but
+ has no idea how to compile or run a Java program from the
+ command-line.
+ 
+ e.g.
+ From the directory containing all source files, compile the
+ driver class (and all dependencies) with the command:
+ $ javac CircuitTracer.java
+
+ Run the compiled class file with the command:
+ $ java CircuitTracer [-q | -s] -c [filename]
+ 
+ Where:
+  * -q -- Uses a queue to store the best paths
+  * -s -- Uses a stack to store the best paths
+  * -c -- Outputs results to the console
+  * [filename] -- name of the file you want the program to read
+  
+ Since -c is a necessary component, the results will be outputted to the console
+
+
+PROGRAM DESIGN AND IMPORTANT CONCEPTS:
+ 
+ The program works by utilizing the search method to go through every possible 
+ outcome from point 1 to point 2 and selecting only the fastest to be put into 
+ the bestPaths list. If another path comes along that's faster than the current 
+ length, it clears out the bestPaths list and adds that newest path to it
+
+ 
+ This program utilizes 3 main classes. The CircuitBoard class is used to house 
+ the object that the CircuitTracer will go through and find paths on. It has a 
+ start and an end point along with optional walls
+
+ The CircuitTracer class is used to find the fastest path from point 1 to point 2
+ 
+ The Storage class is used to house the TraceStates found by CircuitTracer
+ 
+ Some possible enhancements that could be made to the program is to implement a 
+ GUI to the program. It is kind of bland and could use a fresh coat of paint to 
+ make it user friendly
+
+TESTING:
+
+ I went through and ran through every option provided, invalid and valid to 
+make sure the program ran properly. The only one that wasn't able to be passed 
+was the
+ invalid input where one of the dimensions was a Double. However, all of the 
+other ones 
+ properly succeeded or failed depending on the expected outcome.
+
+
+DISCUSSION:
+ 
+ I had quite a few problems with the reading in of my file. Quite a few of the 
+ example files has excess spaces, which threw many wrenches in my algorithms for determining 
+ bad inputs.
+ 
+ However, I enjoyed going through and finding that problem and quickly squashing it 
+ in my test algorithms 
+ 
+ I enjoyed debugging this project a lot. It made me realize that sometimes my 
+ code has very dumb mistakes in it and that I should take proper care in making sure I test 
+ it thouroughly.
+ 
+ 
+ANALYSIS:
+ Queues had a breadth first type of sort structure when running this program 
+ while the stacks had a depth first type of sort structure because of the 
+ difference between the Queues FIFO storage structure when compared to the 
+ Stacks LIFO storage structure
+
+ However with this difference there was no difference in the results returned 
+ by the sort program, which means that they both work the same, just different 
+ efficiencies depending on the input.
+ 
+ These search algorithms had a Big-Oh runtime efficiency of O(n^2)
+ 
+ The maximum storage used would depend on the type of search and the type of 
+ input. If the input has the start close to the end, they will be roughly the 
+ same. However, as the start and end get farther apart, the queue will have a 
+ much larger storage use than the stack because the queue is breadth first 
+ while the stack is depth first
+
+ If the start and end points are close together, then the queue will be a 
+ better for finding the solution faster because of the breadth first search 
+ type. However the queue is much worse at finding the solution than the stack if 
+ the start and end points are far away.
+ 
+ There is no way to guarantee that the first solution is going to be the 
+ shortest path unless all paths are the shortest path, regardless of storage 
+ container.
+----------------------------------------------------------------------------
+
+All content in a README file is expected to be written in clear English with
+proper grammar, spelling, and punctuation. If you are not a strong writer,
+be sure to get someone else to help you with proofreading. Consider all project
+documentation to be professional writing for your boss and/or potential
+customers.

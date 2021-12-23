@@ -1,0 +1,17 @@
+z
+y
+(y y z)
+(49 y z)
+((37) y z)
+()
+(y y z)
+((y y) z)
+(y (y y) z)
+(25 44 66 y y z)
+(x (x) z)
+(x y z)
+(x (y y y) z)
+((y y y) ((y y y) (y y y)) z)
+(x (91 91) ((30 30) x) (y) (y y) z)
+(x (23 y) ((4 y) x) (y) (y y) z)
+(x ((39 39) 39 y) (((48 48) 48 y) x) (y) (y y) z)

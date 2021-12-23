@@ -1,0 +1,39 @@
+Virtualization:
+
+CPUs would do nothing during an I/O operation
+
+I/O and CPU computation time would be interleaved, making it a lot faster
+    By running multiple programs at once (separate programs) it would make the processing speed increase dramatically
+    This was due to the fact that computers can get stopped by long processing time, and by running multiple programs at once, it looks like it's running them concurrently
+
+Interleaved programs shouldn't know about each other
+    Became the goal of the illusion. Not even the computer should be able to tell.
+    The programs think they have complete control of all memory and CPU processing power
+    Don't want programs interfering with each other.
+
+    Each program is given their own share of a virtual CPU and their own virtual memory set
+    The technologies that allow this workflow are called mechanisms or "tricks" -Buff and policies are the ways those mechanisms are managed
+    OS can use interleaved processes, not just homemade programs
+
+ROM -> PROM -> EPPOM
+ROM: Made by elecrically glowing some chip
+PROM: Programmable ROM, single use programmability
+EPROM: Able to wipe out the memory with Ultraviolet light
+EEPROM: Able to wipe out the memory with just electric signals
+
+
+Respect Abstraction layers, only refer to layers one layer in each direction.
+Keep separate users on the same system separate.
+Bug free OS, as much as possible
+.5"x.5" cpu can draw as much power as a toaster
+    Need to dissipate heat somehow, so keeping energy low means things stay cool
+
+
+Processes are executing programs that have a virtual CPU attached to them
+
+SP always points to the top of the stack (but since the stack builds down, it is at the bottom of the stack)
+FP points to the other side of the frame that's at the top of the stack
+
+When finding null pointer error, use gdb command (gdb) bt to find out the problematic called
+    (gdb) frame # will change context to that frame
+

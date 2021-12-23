@@ -1,0 +1,20 @@
+[293]  Start grading michaelcleverdon.tar Score=40
+[309]  Grading make all Score=40
+[322]  Grading CFLAGS and -Wall Score=40
+[326]  Grading -i lower case pattern Score=40
+I went to the food market.
+[338]  Grading -i upper case pattern Score=40
+I went to the food market.
+[349]  Grading exit status for no-lines-matched Score=40
+[358]  Grading expected match at beginning of a line Score=40
+I went to the food market.
+[365]  Grading expected match at beginning of a line Score=40
+I went to the food market.
+[372]  Grading an empty file Score=40
+[381]  Grading case sensitive match-not-found in /home/JimConrad/cs253/hw/p2/TestData/testData.txt Score=40
+
+[392]  Grading case sensitive match in /home/JimConrad/cs253/hw/p2/TestData/testData.txt Score=40
+I went to the food market.
+[405]  Grading make clean Score=40
+[411]  Grading make does nothing if product is up-to-date Score=40
+[437]  FinalScore=40  Score=40

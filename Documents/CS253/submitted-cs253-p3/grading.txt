@@ -1,0 +1,23 @@
+[301]  Start grading michaelcleverdon.tar Score=60
+[311]  Grading make all Score=60
+[326]  Grading CFLAGS and -Wall Score=60
+[330]  Grading CFLAGS and -std=c99 Score=60
+[334]  Grading make rebuilding sed253.o if out-of-date with source file Score=60
+[342]  Grading make rebuilding delete.o if out-of-date with delete.h Score=60
+[350]  Grading make rebuilding executable out-of-date with copy.h Score=60
+[359]  Grading make does nothing if product is up-to-date Score=60
+[368]  Grading copy of well-behaved file Score=60
+[384]  Grading copy of bufferOverflow.txt Score=60
+[394]  Grading delete Score=60
+[406]  Grading substitute with identical length pattern and replacement strings Score=60
+[418]  Grading substitute with replacement shorter than pattern string Score=60
+[425]  ERROR:  Could not grep Xlish Xd eaters play Xtball with X in testOutput.txt Score=57
+[428]  Grading substitute with replacement longer than pattern string Score=57
+[435]  ERROR:  Could not grep XXXXlish XXXXd eaters play XXXXtball with XXXX in testOutput.txt Score=54
+[438]  Grading substitute with a tricky string matching pattern Score=54
+[445]  ERROR:  Could not grep foofoolish foofood eaters play foofootball with foofoo in testOutput.txt Score=51
+[448]  Grading the case of a zero-length replacement string Score=51
+[455]  ERROR:  Could not grep lish d eaters play tball with in testOutput.txt Score=50
+[459]  Grading buffer-overflow attack on substitute feature Score=50
+[468]  Grading make clean Score=50
+[481]  FinalScore=50  Score=50

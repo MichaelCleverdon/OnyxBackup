@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "redir.h": "c",
+        "unistd.h": "c"
+    }
+}

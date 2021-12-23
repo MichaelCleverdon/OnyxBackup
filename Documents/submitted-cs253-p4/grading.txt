@@ -1,0 +1,18 @@
+[277]  --- Start grading michaelcleverdon.tar with ./gradeSmashOne ----- Score=100
+[289]  Grading make all Score=100
+[303]  Grading CFLAGS and -Wall Score=100
+[307]  Grading CFLAGS and -std=c99 Score=100
+[315]  Grading exit command Score=100
+[323]  Grading exit command Score=100
+[332]  Grading cd non-existing-directory Score=100
+[339]  Grading cd existing-directory Score=100
+[346]  Grading basic history functionality using /home/JimConrad/cs253/hw/p4/TestData/test2.in Score=100
+[349]  ERROR:  Could not grep 2.*cd *foo in /tmp/jimconrad236414 Score=95
+[350]  Grading basic history includes exit status for failed cd command Score=95
+[352]  Grading history of history command Score=95
+[353]  ERROR:  Could not grep 4.*history in /tmp/jimconrad236414 Score=90
+[356]  Grading long (>10 commands) history using /home/JimConrad/cs253/hw/p4/TestData/test3.in Score=90
+[358]  ERROR:  Could not grep 11.*theLastLsCommand in /tmp/jimconrad236414 Score=85
+[361]  Grading external command:  foo arg1 arg2 arg3 Score=85
+[369]  Grading buffer overflow attack Score=85
+[386]  FinalScore=85  Score=85

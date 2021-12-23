@@ -1,0 +1,10 @@
+[291]  Start grading michaelcleverdon.tar Score=40
+[308]  Grading /home/JimConrad/cs253/hw/p1/TestData/testFile.txt Score=40
+[318]  Grading normal exit status Score=40
+upper-case:  0
+lower-case: 0
+vowels: 0
+consonants: 0
+digits: 0
+total: 0
+[333]  FinalScore=40  Score=40

@@ -1,0 +1,39 @@
+Expected: y
+y
+
+Expected: (y y z)
+(y y z)
+
+Expected: (RANDOM y z)
+((50) y z)
+
+Expected: (y y z)
+(y y z)
+
+Expected: (RANDOM RANDOM RANDOM y y z)
+(58 24 44 y y z)
+
+Expected: (x (x) z)
+(x (x) z)
+
+Expected: (x y z)
+(x y z)
+
+Expected: (x (y y y) z)
+(x (y y y) z)
+
+Expected: ((y y y) ((y y y) (y y y)) z)
+((y y y) ((y y y) (y y y)) z)
+
+Input: (x (x) ((x) x) (y) (y y) z) '(x) '(RANDOM RANDOM))
+Expected: (x (RANDOM RANDOM) ((RANDOM RANDOM) x) (y) (y y) z)
+(x (95 95) ((31 31) x) (y) (y y) z)
+
+Input: (x (x) ((x) x) (y) (y y) z) '(x) '(RANDOM y))
+Expected: (x (RANDOM y) ((RANDOM y) x) (y) (y y) z)
+(x (6 y) ((8 y) x) (y) (y y) z)
+
+Input: (x (x) ((x) x) (y) (y y) z) '(x) '((RANDOM RANDOM) RANDOM y))
+Expected: (x ((RANDOM RANDOM) RANDOM2 y) (((RANDOM RANDOM) RANDOM2 y) x) (y) (y y) z)
+(x ((90 90) 90 y) (((47 47) 47 y) x) (y) (y y) z)
+

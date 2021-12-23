@@ -1,0 +1,12 @@
+cd . should change the directory to the current directory, effectively the same command as pwd
+cd noSuchDirectory should return a 1 error status and an error message
+exit should exit the program
+history should return the history and exit statuses of the most recent 10 messages
+cd /home/user/Desktop should change the directory to /home/user/Desktop
+cd .. should return the parent directory
+cd . . should return an error status of 1, no error message
+cd arg1 arg2 should return an error status of 1, no error message
+cd / should change the directory to /
+cd ./ should change the directory to the current directory,  effectively the same command as pwd
+noSuchCommand arg2 should print the tokens and return a 127 error status
+history after running noSuchCommand arg2 should return noSuchCommand arg2 with a 127 exit status and then history with an exit status of 0

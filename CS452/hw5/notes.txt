@@ -1,0 +1,47 @@
+bnew(size, lowerBound, upperBound)
+    size is a number, if that number isn't on a 2^x boundary, then jump to the next boundary
+    lowerBound, the x in 2^x. Lower bound of size of memory allowed to be allocated
+    upperBound, same as above, just maximum size that someone can alloc at one time
+    get memory from mmap
+
+bsize returns the size of the allocation, not how much was requested (requesting 1000 bytes will obtain 1024 bytes. Therefore bsize prints 1024)
+bprint is a nice debug tool, keep it up to date when developing this.
+
+use char arrays (proper ones like char a[] not char*) as byte maps.
+    already implemented apparently?
+
+Keep track of which buddy is allocated with the bitmap. 
+    0 means not allocated. 1 means allocated. Use this for bfree
+
+Having toString functions for the modules is very helpful
+
+
+Buddy algorithm
+
+Splitting:
+Split in half until the block size is slightly more than the size you're requesting
+    if currentBlockSize/2 > requestedSize
+        currentBlockSize /= 2
+        Go again
+    else
+        return currentBlockSize
+
+Joining:
+When a block is freed
+    if block.buddy is free
+        joinBlocks()
+        Check if parent block has a buddy
+        recursively go up the tree
+    else    
+        do nothing
+
+
+The bitmap is the state of the freelist
+    Take a memory address from the client
+
+
+mem is an address to a block of memory
+
+The alloc returns an address, use base to get an index of the bitmap and check that
+    if 1 allocated
+    if 0 not allocated

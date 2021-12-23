@@ -1,0 +1,5 @@
+dup and dup2 for file I/O redirection
+
+file descriptor fiddling for piping needs to happen in parent class
+
+WRITE TESTS
