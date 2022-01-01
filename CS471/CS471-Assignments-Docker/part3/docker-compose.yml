@@ -1,0 +1,37 @@
+version: '3.1'
+
+services:
+
+  postgres-db-container:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgresondockeruser
+      POSTGRES_PASSWORD: postgresondockerpassword
+      POSTGRES_DB: postgresondockerdb
+
+  web-app1:
+    image: hw_image_part2_webapp_only
+    restart: always
+    ports:
+      - 5001:5000
+
+  web-app2:
+    image: hw_image_part2_webapp_only
+    restart: always
+    ports:
+      - 5002:5000
+
+  web-app3:
+    image: hw_image_part2_webapp_only
+    restart: always
+    ports:
+      - 5003:5000
+
+  # instantiate a container that will allow to
+  # manage the database through a web interface
+  adminer-database-management:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
